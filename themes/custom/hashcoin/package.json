@@ -1,0 +1,30 @@
+{
+  "name": "hashcoin",
+  "version": "1.0.0",
+  "description": "Hashcoin bootstrap sub-theme implementation",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  },
+  "keywords": [
+    "SASS",
+    "Bootstrap",
+    "Drupal"
+  ],
+  "author": "Mangesh Gawade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/username/repository/issues"
+  },
+  "homepage": "https://github.com/username/repository#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^4.0.2"
+  }
+}

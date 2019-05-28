@@ -1,0 +1,119 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+
+ $white: #ffffff;
+ $maroon: #d37285;
+ $grey: #cccccc;
+ $bold-font: 700;
+ $nav-text-color: #333333;
+ $padding-zero: 0px;
+ $float-unset: none;
+ $cirled-border: 50%; 
+
+header.navbar-default {
+	background-color: $white;
+	border: 0 none;
+	padding: $padding-zero;
+	.navbar-header {
+		float: $float-unset;
+	}
+	.navbar-header {
+		.region-navigation {
+			display: flex;
+		  	flex-direction: row;
+		  	flex-wrap: wrap;
+		    width: 100%;
+		    .block {
+		    	display: flex;
+			    flex-direction: column;
+			    flex-basis: 100%;
+			    flex: 1;
+			    justify-content: center;
+			    ul.social-media-links--platforms {
+			    	text-align: center;
+			    	li > a > span.fa {
+			    		border: 1px solid $grey;
+			    		border-radius: $cirled-border;
+			    		display: block;
+			    		height: 32px;
+			    		font-size: 1.2em;
+			    		padding: 5px;
+			    		width: 32px;
+			    	}
+			    }
+			    form#search-block-form {
+			    	margin: 0 auto;
+			    	width: 40%;
+			    	.input-group {
+			    		border: 1px solid $grey;
+			    		border-radius: 16px;
+			    		padding: 6px;
+			    		.form-control {
+			    			background-color: $white;
+			    			border: 0 none;
+			    			height: 24px;
+			    			box-shadow: none;
+			    			-webkit-box-shadow: none;
+			    		}
+			    		.input-group-btn button.btn-primary {
+			    			background-color: transparent;
+			    			color: $maroon;
+			    			border: 0 none;
+			    			padding: 2px 12px;
+			    			.glyphicon-search {	
+			    				transform: scaleX(-1);
+							    -moz-transform: scaleX(-1);
+							    -webkit-transform: scaleX(-1);
+							    -ms-transform: scaleX(-1);
+			    			}
+			    		}
+			    	}
+			    }
+		    }
+		}
+	}
+	.navbar-collapse {
+		border-top: 1px solid $grey;
+		padding: $padding-zero;
+		text-align: center;
+		.navbar-nav {
+		  display: inline-block;
+		  float: none;
+		  vertical-align: top;
+		  > li > a {
+		  	color: $nav-text-color;
+		  	font-weight: $bold-font;
+		  	text-transform: uppercase;
+		  }
+		  > li > a.is-active {
+		  	color: #d1687d;
+		  }
+		}
+	}
+	
+}
+
+/*---main content section css start---*/
+.main-container > .row > section.col-sm-12 {
+	padding: 0;
+}
+/*---main content section css end---*/
+
+/*---custom region css start---*/
+.custom-region-one { 
+	padding: 0;
+	section {
+		border-top: 1px solid $grey;
+		padding: 60px 0;
+	}
+}
+/*---custom region css end---*/
+
+.block-views-blocknews-events-block-1 {
+	h2.block-title {
+		text-align: center;
+		font-weight: 700;
+	}
+}

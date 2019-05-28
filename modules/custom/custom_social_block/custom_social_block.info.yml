@@ -1,0 +1,7 @@
+name: Custom Social Icons Block
+description: A Custom block for social icons.
+type: module
+core: 8.x
+package: Custom
+dependencies:
+  - block

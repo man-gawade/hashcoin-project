@@ -1,0 +1,101 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+header.navbar-default {
+  background-color: #ffffff;
+  border: 0 none;
+  padding: 0px; }
+  header.navbar-default .navbar-header {
+    float: none; }
+  header.navbar-default .navbar-header .region-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%; }
+    header.navbar-default .navbar-header .region-navigation .block {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      header.navbar-default .navbar-header .region-navigation .block ul.social-media-links--platforms {
+        text-align: center; }
+        header.navbar-default .navbar-header .region-navigation .block ul.social-media-links--platforms li > a > span.fa {
+          border: 1px solid #cccccc;
+          border-radius: 50%;
+          display: block;
+          height: 32px;
+          font-size: 1.2em;
+          padding: 5px;
+          width: 32px; }
+      header.navbar-default .navbar-header .region-navigation .block form#search-block-form {
+        margin: 0 auto;
+        width: 40%; }
+        header.navbar-default .navbar-header .region-navigation .block form#search-block-form .input-group {
+          border: 1px solid #cccccc;
+          border-radius: 16px;
+          padding: 6px; }
+          header.navbar-default .navbar-header .region-navigation .block form#search-block-form .input-group .form-control {
+            background-color: #ffffff;
+            border: 0 none;
+            height: 24px;
+            box-shadow: none;
+            -webkit-box-shadow: none; }
+          header.navbar-default .navbar-header .region-navigation .block form#search-block-form .input-group .input-group-btn button.btn-primary {
+            background-color: transparent;
+            color: #d37285;
+            border: 0 none;
+            padding: 2px 12px; }
+            header.navbar-default .navbar-header .region-navigation .block form#search-block-form .input-group .input-group-btn button.btn-primary .glyphicon-search {
+              transform: scaleX(-1);
+              -moz-transform: scaleX(-1);
+              -webkit-transform: scaleX(-1);
+              -ms-transform: scaleX(-1); }
+  header.navbar-default .navbar-collapse {
+    border-top: 1px solid #cccccc;
+    padding: 0px;
+    text-align: center; }
+    header.navbar-default .navbar-collapse .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top; }
+      header.navbar-default .navbar-collapse .navbar-nav > li > a {
+        color: #333333;
+        font-weight: 700;
+        text-transform: uppercase; }
+      header.navbar-default .navbar-collapse .navbar-nav > li > a.is-active {
+        color: #d1687d; }
+
+/*---main content section css start---*/
+.main-container > .row > section.col-sm-12 {
+  padding: 0; }
+
+/*---main content section css end---*/
+/*---custom region css start---*/
+.custom-region-one {
+  padding: 0; }
+  .custom-region-one section {
+    border-top: 1px solid #cccccc;
+    padding: 60px 0; }
+
+/*---custom region css end---*/
+.block-views-blocknews-events-block-1 h2.block-title {
+  text-align: center;
+  font-weight: 700; }
