@@ -1,1 +1,1 @@
-# hashcoin
+# hashcoin-project
