@@ -1,7 +1,16 @@
 framework:
   css:
     theme:
+      css/bootstrap.min.css: {}
+      css/bootstrap-theme.min.css: {}
+      css/drupal-bootstrap.css: {}
+      css/font-awesome.min.css: {}
       css/style.css: {}
+      css/custom.css: {}
+
+  js:
+      js/bootstrap.min.js: {}
+      js/custom.js: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:
