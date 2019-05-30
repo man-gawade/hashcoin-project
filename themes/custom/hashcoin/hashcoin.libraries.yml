@@ -12,6 +12,11 @@ framework:
       js/bootstrap.min.js: {}
       js/custom.js: {}
 
+  dependencies:
+      - core/assets/vendor/jquery
+      - core/assets/vendor/jquery-once
+
+
 # Uncomment for LESS source JavaScript files.
 #  js:
 #    bootstrap/js/affix.js: {}

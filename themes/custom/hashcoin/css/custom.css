@@ -3,7 +3,7 @@ header.navbar-default {
 }
 
 /*---Testimonial slider css start---*/
-.block-views-blocktestimonials-block-1 h2.block-title {
+/*.block-views-blocktestimonials-block-1 h2.block-title {
   display: none;
 }
 .views_slideshow_cycle_main {
@@ -20,7 +20,7 @@ header.navbar-default {
 }
 .block-views-blocktestimonials-block-1 .views-field-title a {
   color: #c03957;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
@@ -51,7 +51,7 @@ header.navbar-default {
 /*---Testimonial slider css end---*/
 
 /*---News and events block css start---*/
-.block-views-blocknews-events-block-1 .views-view-grid.horizontal {
+/*.block-views-blocknews-events-block-1 .views-view-grid.horizontal {
   margin: 0 auto;
   max-width: 1200px;
 }
