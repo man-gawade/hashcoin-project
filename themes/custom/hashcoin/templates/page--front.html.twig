@@ -173,3 +173,12 @@
     </footer>
   {% endblock %}
 {% endif %}
+
+{# Copyright region #}
+{% if page.copyright_region %}
+  {% block copyright_region %}
+    <footer class="copyright {{ container }}" role="contentinfo">
+      {{ page.copyright_region }}
+    </footer>
+  {% endblock %}
+{% endif %}

@@ -1,120 +1,52 @@
-header.navbar-default {
-  margin: 0;
-}
 
-/*---Testimonial slider css start---*/
-/*.block-views-blocktestimonials-block-1 h2.block-title {
-  display: none;
+.block-views-blocktestimonials-block-1 .views-field-field-testimonial-image {
+	position: relative;
 }
-.views_slideshow_cycle_main {
-  max-width: 350px;
-  margin: 0 auto;
-  text-align: center;
-}
-.views_slideshow_cycle_main .views-field {
-  margin: 0 0 10px;
-}
-.views-field-field-testimonial-image img {
-  border-radius: 50%;
-  margin: 0 auto;
-}
-.block-views-blocktestimonials-block-1 .views-field-title a {
-  color: #c03957;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.views-field-field-last-name {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 34px;
-}
-.views-field-field-review-numbers .field-content {
-  display: none;
-}
-.fa-star {
-  margin: 0 2px;
-}
-.fa-star.checked {
-  color: orange;
-}
-.block-views-blocktestimonials-block-1 .views-field-body {
-  font-size: 14px;
-  font-style: italic;
-  line-height: 20px;
-}
-.views-slideshow-controls-bottom .widget_pager li.active {
-  background: #c03957;
-}
-/*---Testimonial slider css end---*/
-
-/*---News and events block css start---*/
-/*.block-views-blocknews-events-block-1 .views-view-grid.horizontal {
-  margin: 0 auto;
-  max-width: 1200px;
-}
-.block-views-blocknews-events-block-1 h2.block-title {
-  font-size: 46px;
-  margin-bottom: 20px;
-}
-.block-views-blocknews-events-block-1 .views-view-grid .views-row {
-  display: flex;
-}
-.block-views-blocknews-events-block-1 .views-view-grid .views-col {
-  border: 1px solid #cccccc;
-  margin: 0 25px 0 0;
-}
-.block-views-blocknews-events-block-1 .views-view-grid .views-field {
-  margin: 0 0 25px;
-  padding: 0 35px;
-}
-.block-views-blocknews-events-block-1 .views-view-grid .views-field-field-event-image,
-.block-views-blocknews-events-block-1 .views-view-grid .views-field-field-news-image {
-  margin: 0 0 55px;
-  padding: 0;
-  position: relative;
-}
-.block-views-blocknews-events-block-1 .views-view-grid .views-field-field-event-image:after,
-.block-views-blocknews-events-block-1 .views-view-grid .views-field-field-news-image:after {
-  background-repeat: no-repeat;
-  background-position: left top;
+.block-views-blocktestimonials-block-1 .views-field-field-testimonial-image:after {
+	background-image: url('../images/testimonial-icon60x60.png');
+	background-repeat: no-repeat;
+	background-position: left top;
   background-color: #ffffff;
   border-radius: 50%;
   content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -30px;
-  height: 60px;
-  width: 60px;
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	right: 12%;
+	bottom: 12%;
 }
-.block-views-blocknews-events-block-1 .views-view-grid .views-col:nth-child(n+1) .views-field-field-event-image:after,
-.block-views-blocknews-events-block-1 .views-view-grid .views-col:nth-child(n+1) .views-field-field-news-image:after {
-  background-image: url('../images/edit-icon1.png');
+
+
+/*---News event block css---*/
+.pager-nav ul li a {
+    border-width: 0 0 0 2px;
+    border-color: #808080;
+    border-radius: initial;
+    color: #808080;
+    font-weight: 700;
+    padding: 0 12px;
 }
-.block-views-blocknews-events-block-1 .views-view-grid .views-col:nth-child(n+2) .views-field-field-event-image:after,
-.block-views-blocknews-events-block-1 .views-view-grid .views-col:nth-child(n+2) .views-field-field-news-image:after {
-  background-image: url('../images/edit-icon2.png');
+.pager-nav ul li a:hover {
+    background: transparent;
+    border-color: #808080;
 }
-.block-views-blocknews-events-block-1 .views-view-grid .views-col:nth-child(n+3) .views-field-field-event-image:after,
-.block-views-blocknews-events-block-1 .views-view-grid .views-col:nth-child(n+3) .views-field-field-news-image:after {
-  background-image: url('../images/edit-icon3.png');
+.pager-nav ul li:first-child a {
+    border: 0;
 }
-.block-views-blocknews-events-block-1 .views-view-grid .views-col:last-child {
-  margin: 0;
+
+/*---Footer css start---*/
+
+/*---Copyright region css---*/
+footer.footer {
+  background-image: url('../images/footer-bg-new.jpg');
+  background-repeat: repeat-y;
+  background-position: left top;
 }
-.block-views-blocknews-events-block-1 .views-field-title a {
-  color: #333333;
-  font-size: 20px;
+footer.copyright {
+  color: #808080;
   font-weight: 700;
-  line-height: 26px;
-  text-decoration: none;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
 }
-.block-views-blocknews-events-block-1 .views-field-body {
-  color: #858585;
-  font-size: 16px;
-  line-height: 26px;
-}
-/*---News and events block css end---*/
+

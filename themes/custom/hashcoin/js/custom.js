@@ -1,4 +1,14 @@
 (function ($) {
+  
+  Drupal.behaviors.awesome = {
+    attach: function(context, settings) {
+      var pager_data = $('.block-views-blocknews-events-block-1 .view-content').siblings('nav').get(0).outerHTML;
+      $('.block-views-blocknews-events-block-1 .view-content', context).once('awesome').before(pager_data);
+      $('.block-views-blocknews-events-block-1 .view-content').next('nav').remove();
+    }
+  };
+  
+  
   $(document).ready(function () {
     //Js code for add review stars according to the enter numbers out of five.
     var stars = '<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>';
@@ -24,4 +34,10 @@
       }
     });
   });
+  
 })(jQuery);
+
+
+
+
+
