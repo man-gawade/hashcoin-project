@@ -16,6 +16,34 @@
  $twitter: #00abef;
  $youtube: #d12020;
 
+ %social-style {
+ 	border: 1px solid $grey;
+	border-radius: $cirled-border;
+	display: block;
+	line-height: 22px;
+	height: 32px;
+	font-size: 1.2em;
+	padding: 5px;
+	width: 32px;
+ }
+%fa-google-plus {
+	color: $google-plus;
+}
+%fa-linkedin {
+	color: $linkedin;
+}
+%fa-twitter {
+	color: $twitter;
+}
+%fa-youtube {
+	color: $youtube;
+}
+
+.region.region-content {
+	padding: 40px;
+}
+
+/*---header section css start---*/
 header.navbar-default {
 	background-color: $white;
 	background-image: none;
@@ -25,6 +53,10 @@ header.navbar-default {
 	padding: $padding-zero;
 	.navbar-header {
 		float: $float-unset;
+		@media all and (max-width: 768px) {
+			margin: 0;
+			padding: 25px 0 0;
+		}
 	}
 	.navbar-header {
 		.region-navigation {
@@ -32,37 +64,36 @@ header.navbar-default {
 		  	flex-direction: row;
 		  	flex-wrap: wrap;
 		    width: 100%;
+		    @media all and (max-width: 768px) {
+		    	display: block;
+			}
 		    .block {
 		    	display: flex;
 			    flex-direction: column;
 			    flex-basis: 100%;
 			    flex: 1;
 			    justify-content: center;
+			    @media all and (max-width: 768px) {
+			    	display: block;
+			    }
 			    ul.social-media-links--platforms {
 			    	text-align: center;
 			    	li 
 			    	> a {
 				    	span.fa {
-				    		border: 1px solid $grey;
-				    		border-radius: $cirled-border;
-				    		display: block;
-				    		line-height: 22px;
-				    		height: 32px;
-				    		font-size: 1.2em;
-				    		padding: 5px;
-				    		width: 32px;
+				    		@extend %social-style;
 				    	}
 				    	span.fa-google-plus {
-				    		color: $google-plus;
+				    		@extend %fa-google-plus;
 				    	}
 				    	span.fa-linkedin {
-				    		color: $linkedin;
+				    		@extend %fa-linkedin;
 				    	}
 				    	span.fa-twitter {
-				    		color: $twitter;
+				    		@extend %fa-twitter;
 				    	}
 				    	span.fa-youtube {
-				    		color: $youtube;
+				    		@extend %fa-youtube;
 				    	}
 			    	}
 			    	> a:hover {
@@ -71,7 +102,16 @@ header.navbar-default {
 			    }
 			    form#search-block-form {
 			    	margin: 0 auto;
-			    	width: 40%;
+			    	width: 35%;
+			    	@media all and (max-width: 1140px) {
+			    		width: 60%;
+			    	}
+			    	@media all and (max-width: 640px) {
+			    		width: 65%;
+			    	}
+			    	@media all and (max-width: 480px) {
+			    		width: 70%;
+			    	}
 			    	.input-group {
 			    		border: 1px solid $grey;
 			    		border-radius: 16px;
@@ -102,6 +142,15 @@ header.navbar-default {
 			    	}
 			    }
 		    }
+		    @media all and (max-width: 768px) {
+			    .logo {
+			    	display: block;
+			    	float: none !important;
+			    	text-align: center;
+			    	margin: 0 0 20px;
+			    	padding: 0;
+			    }
+		    }
 		}
 	}
 	.navbar-collapse {
@@ -124,12 +173,14 @@ header.navbar-default {
 	}
 	
 }
+/*---header section css end---*/
 
 /*---main content section css start---*/
 .main-container > .row > section.col-sm-12 {
 	padding: 0;
 }
 .path-frontpage .region-content {
+	display: none;
 	h1.page-header,
 	.views-element-container {
 		display: none;
@@ -141,11 +192,88 @@ header.navbar-default {
 .custom-region-one { 
 	padding: 0;
 	section {
-		border-top: 1px solid $grey;
 		padding: 60px 0;
 	}
 }
 /*---custom region css end---*/
+
+/*---Hero banner section css start---*/
+section#block-heroimageblock {
+	border: 0 none;
+	padding: $padding-zero;
+	position: relative;
+	.banner-info-wrapper {
+	    position: absolute;
+	    top: 30%;
+	    left: 10%;
+	    @media all and (max-width: 1024px) {
+	    	top: 4%;
+	    }
+	    span {
+		    display: block;
+		    margin: 0 0 5px;
+		    letter-spacing: 1px;
+		}
+		span.hero-black-text {
+		    font-size: 44px;
+		    @media all and (max-width: 767px) {
+		    	font-size: 24px;
+		    }
+		    @media all and (max-width: 480px) {
+		    	font-size: 20px;
+		    }
+		}
+		span.hero-pink-text {
+		    color: #bf3554;
+		    font-weight: 600;
+		    font-size: 52px;
+		    line-height: 20px;
+		    @media all and (max-width: 767px) {
+		    	font-size: 26px;
+		    	line-height: 10px;
+		    }
+		    @media all and (max-width: 480px) {
+		    	font-size: 22px;
+		    	line-height: 10px;
+		    }
+		}
+		span.hero-white-text {
+		    color: $white;
+		    font-weight: 700;
+		    font-size: 64px;
+		    line-height: 70px;
+		    margin-bottom: 30px;
+		    display: block;
+		    @media all and (max-width: 767px) {
+		    	font-size: 32px;
+		    	line-height: 34px;
+		    	margin-bottom: 15px;
+		    }
+		    @media all and (max-width: 480px) {
+		    	font-size: 24px;
+		    	line-height: 22px;
+		    	margin-bottom: 12px;
+		    }
+		}
+		a {
+		    background: #f9b914;
+		    padding: 12px 24px;
+		    border-radius: 18px;
+		    color: $white;
+		    text-transform: uppercase;
+		    letter-spacing: 1px;
+		    @media all and (max-width: 767px) {
+		    	padding: 8px 14px;
+		    }
+		    @media all and (max-width: 480px) {
+		    	padding: 6px 10px;
+    			font-size: 12px;
+		    }
+		}
+	}
+}
+
+/*---Hero banner section css end---*/
 
 /*---Testimonial css start---*/
 .fa-star {
@@ -167,9 +295,25 @@ header.navbar-default {
 	  	.views-field {
 	  		margin: 0 0 10px;
 		}
-		.views-field-field-testimonial-image img {
-  			border-radius: 50%;
-  			margin: 0 auto;
+		.views-field-field-testimonial-image {
+			position: relative;
+			img {
+	  			border-radius: 50%;
+	  			margin: 0 auto;
+			}
+		}
+		.views-field-field-testimonial-image:after {
+			background-image: url('../images/testimonial-icon60x60.png');
+			background-repeat: no-repeat;
+			background-position: left top;
+		  	background-color: $white;
+		  	border-radius: 50%;
+		  	content: "";
+			position: absolute;
+			height: 60px;
+			width: 60px;
+			right: 12%;
+			bottom: 12%;
 		}
 		.views-field-title {
 			a {
@@ -207,6 +351,7 @@ header.navbar-default {
 /*---News and events block css start---*/
 
 .block-views-blocknews-events-block-1 {
+	background: #f1f1f2;
 	h2.block-title {
 	  	font-size: 46px;
 	  	font-weight: 700;
@@ -218,10 +363,19 @@ header.navbar-default {
 	  	max-width: 1200px;
 	  	.views-row {
 			display: flex;
+			@media all and (max-width: 768px) {
+				display: block;
+			}
 			.views-col {
-			  	border: 1px solid #cccccc;
+			  	border: 1px solid $grey;
 			  	margin: 0 25px 0 0;
 			  	position: relative;
+			  	padding-bottom: 50px;
+			  	@media all and (max-width: 768px) {
+			  		padding: 0;
+					width: 100% !important;
+					margin: 0 0 25px;
+				}
 			  	.views-field {
 				  	margin: 0 0 25px;
 				  	padding: 0 35px;
@@ -231,6 +385,11 @@ header.navbar-default {
 				  	margin: 0 0 55px;
 				  	padding: 0;
 				  	position: relative;
+				  	img {
+				  		@media all and (max-width: 768px) {
+				  			width: 100%;
+				  		}
+				  	}
 				}
 				.views-field-field-event-image:after,
 				.views-field-field-news-image:after {
@@ -249,9 +408,11 @@ header.navbar-default {
 				.views-field-title {
 					a {
 				  		color: $nav-text-color;
+				  		display: block;
 				  		font-size: 20px;
 				  		font-weight: 700;
 				  		line-height: 26px;
+				  		text-align: center;
 				  		text-decoration: none;
 					}
 				}
@@ -259,11 +420,19 @@ header.navbar-default {
 				  	color: #858585;
 				  	font-size: 16px;
 				  	line-height: 26px;
+				  	text-align: center;
 				}
 				.views-field-type {
 					border-top: 1px solid $grey; 
 					padding: $padding-zero;
 					margin: 0;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					@media all and (max-width: 768px) {
+				  		position: relative;
+					}
 					.custom-fields {
 						border-right: 1px solid $grey;
 						color: $nav-text-color;
@@ -301,9 +470,204 @@ header.navbar-default {
 				}
 			}
 		}
+	}	
+	.pager-nav ul {
+		li {
+			a {
+				background: none;
+			    border-width: 0 0 0 2px;
+			    border-color: #808080;
+			    border-radius: initial;
+			    color: #808080;
+			    font-weight: 700;
+			    padding: 0 12px;
+			}
+			a:hover {
+			    background: transparent;
+			    border-color: #808080;
+			}
+		}
+		li:first-child a {
+		    border: 0;
+		}
 	}
-	
 }
 
-
 /*---News and events block css end---*/
+
+/*---footer css start---*/
+footer.footer {
+  	background-image: url('../images/footer-bg-new.jpg');
+  	background-repeat: repeat-y;
+  	background-position: left top;
+  	color: $white;
+  	margin: 0;
+  	padding: 5% 10%;
+  	.region.region-footer {
+		display: flex;
+	  	flex-flow: row wrap;
+	  	@media all and (max-width: 768px) {
+	  		display: block;
+	  	}
+	  	section.block {
+		  	flex: 1;
+		  	margin: 5px;
+		  	padding: 10px;
+		  	box-sizing: border-box;
+		  	@media all and (max-width: 768px) {
+		  		margin: 0 0 20px;
+		  	}
+		  	h2.block-title {
+		  		font-size: 28px;
+		  		font-weight: 700;
+		  		margin-top: 0;
+		  		text-align: center;
+		  	}
+		}
+	  	section.block:first-child,
+		section.block:last-child {
+			flex: 1 100%;
+		}
+		section.block-social-media-links {
+			ul {
+				text-align: center;
+				li > a {
+					span {
+						@extend %social-style;
+					}
+					span.fa-google-plus {
+				    	@extend %fa-google-plus;
+				    }
+				    span.fa-linkedin {
+				    	@extend %fa-linkedin;
+				    }
+				    span.fa-twitter {
+				    	@extend %fa-twitter;
+				    }
+				   	span.fa-youtube {
+				    	@extend %fa-youtube;
+				    }
+				    > a:hover {
+			    		text-decoration: none;
+			    	}
+				}
+			}
+		}
+		section.block-views-blocknews-events-block-2 {
+			.view {
+				.views-row {
+					margin: 0 0 15px;
+					overflow: hidden;
+					.views-field-title a {
+						color: $white;
+						display: block;
+						margin: 0 0 10px;
+						text-decoration: none;
+					}
+					.views-field-type {
+						.custom-fields {
+							float: left;
+							width: 33.333%;
+							text-align: center;
+							@media all and (max-width: 480px) {
+								padding: 25px 0 0;
+							}
+						}
+						.event-date-field {
+							background-image: url('../images/calender.png');
+							background-repeat: no-repeat;
+							background-position: 10px center;
+							@media all and (max-width: 480px) {
+								padding: 25px 0 0;
+								background-position: center top;
+							}
+						}
+						.author-field {
+							background-image: url('../images/user-icon.png');
+							background-repeat: no-repeat;
+							background-position: 15px center;
+							@media all and (max-width: 480px) {
+								padding: 25px 0 0;
+								background-position: center top;
+							}
+						}
+						.content-type-field {
+							background-image: url('../images/attach-icon.png');
+							background-repeat: no-repeat;
+							background-position: 15px center;
+							@media all and (max-width: 480px) {
+								padding: 25px 0 0;
+								background-position: center top;
+							}
+						}
+					}	
+				}
+			}
+		}
+		section#block-hashcoin {
+			p.hascoin-desc-para {
+			    text-align: center;
+			    line-height: 24px;
+			    margin: 18px 0 10px;
+			}
+			p.hascoin-address-para {
+			    text-transform: uppercase;
+			    font-weight: 700;
+			    text-align: center;
+			    line-height: 24px;
+			}
+			p.hascoin-sitelink-para {
+			    color: #f9b914;
+			    text-transform: uppercase;
+			    font-weight: 700;
+			    letter-spacing: 1px;
+			    text-align: center;
+			}
+		}
+		section#block-newsletter {
+			.description {
+				line-height: 24px;
+				margin: 0 0 30px;
+				text-align: center;
+			}
+			.input-group {
+			    border: 1px solid $grey;
+			    border-radius: 20px;
+			    padding: 6px 8px 6px 12px;
+			    background: $white;
+			    line-height: 29px;
+			    input[type="email"] {
+					background: none;
+					border: 0 none;
+				    line-height: 22px;
+				    text-transform: uppercase;
+				    font-weight: 700;
+				    outline: none;
+				    width: 100%;
+				}
+				button[type="submit"] {
+					background: none;
+				    border: 0 none;
+				    box-shadow: none;
+				    padding: 5px;
+				    outline: none;
+				    .em-only {
+				    	display: none;
+				    }
+				    .icon.glyphicon-envelope {
+				    	color: $maroon;
+				    }
+				}
+			}
+		}
+	}
+}
+/*---footer css end---*/
+
+footer.copyright {
+  color: #808080;
+  font-weight: 700;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+}

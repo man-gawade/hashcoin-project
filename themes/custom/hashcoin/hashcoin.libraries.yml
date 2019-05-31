@@ -6,7 +6,6 @@ framework:
       css/drupal-bootstrap.css: {}
       css/font-awesome.min.css: {}
       css/style.css: {}
-      css/custom.css: {}
 
   js:
       js/bootstrap.min.js: {}
